@@ -2090,7 +2090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cat: {fileID: 1573932137}
   MouseGrid: {fileID: 1429812754}
-  birth: {fileID: 678918054}
+  birthPoints: []
   image_grid: {fileID: 5575578076686905533, guid: eac212c6af137c942ac1aedb9d0cb1de, type: 3}
   mouseCount: 2
   level: 3
@@ -2747,11 +2747,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89a8a3fb5989c254eb0050c2c96db7fb, type: 3}
---- !u!1 &678918054 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2436591628042025513, guid: 89a8a3fb5989c254eb0050c2c96db7fb, type: 3}
-  m_PrefabInstance: {fileID: 678918053}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1330538107
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,25 +15,30 @@ public class GameManager : MonoBehaviour
     public GameObject MouseGrid;
 
     [Header("GameData")]
-    public GameObject birth;
-    private Collider2D birth_collider;
-
+    public GameObject[] birthPoints;
+    public Collider2D[] birth_colliders;
+    public GameObject mouse;
     public GameObject image_grid;
     public int mouseCount;
     public int level;
 
+    //private
+    bool isWin = false;
+
     void Start() {
         if (Instance == null)Instance = this;
-        birth_collider = birth.GetComponent<Collider2D>();
+        for(int i = 0; i < birthPoints.Length; i++) birth_colliders[i] = birthPoints[i].GetComponent<Collider2D>();
         UpdateMouseCount();
     }
     void Update() {
         if (Input.GetMouseButtonDown(0)) {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            if(hit.collider == birth_collider) {
+            for(int i = 0;i < birth_colliders.Length; i++)
+            if(hit.collider == birth_colliders[i]) {
                 Debug.Log("Success");
-                mouseCount--;
 
+                mouseCount--;
+                UpdateMouseCount();
             }
         }
     }
@@ -44,7 +50,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void UpdateUI() {
 
+    private void GameOver() {
+        if (isWin) {
+            SceneManager.LoadScene("l_" + (++level));
+        }
     }
+
 }

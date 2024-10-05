@@ -6,6 +6,6 @@ using UnityEngine.SceneManagement;
 public class StartBtn : MonoBehaviour
 {
     public void StartGame() {
-        SceneManager.LoadScene("first");
+        SceneManager.LoadScene("l_1");
     }
 }

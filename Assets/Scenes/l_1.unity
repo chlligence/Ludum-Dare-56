@@ -291,7 +291,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cat: {fileID: 170390278}
   MouseGrid: {fileID: 1238286032}
-  birth: {fileID: 1291922112}
+  birthPoints:
+  - {fileID: 1291922112}
+  birth_colliders:
+  - {fileID: 0}
   image_grid: {fileID: 1238286031}
   mouseCount: 1
   level: 1
