@@ -9,9 +9,8 @@ public class GameManager : MonoBehaviour
 
     public List<GameObject> mice;
     public GameObject cat;
-
     [Header("UI")]
-    public TextMeshPro textMeshPro;
+    public GameObject MouseGrid;
 
     [Header("GameData")]
     public int mouseCount;
@@ -21,6 +20,14 @@ public class GameManager : MonoBehaviour
         if (Instance == null)Instance = this;
     }
     void Update() {
+
+    }
+    private void initMouse() {
+        for (int i = 0; i < mouseCount; i++) {
+            mice.Add(new GameObject());
+        }
+    }
+    private void UpdateUI() {
 
     }
 }
