@@ -1,23 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject spider;
-    public GameObject human;
-    void Start()
-    {
-        
-    }
+    public static GameManager Instance;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public List<GameObject> mice;
+    public GameObject cat;
 
-    void run() {
-        
+    [Header("UI")]
+    public TextMeshPro textMeshPro;
+
+    [Header("GameData")]
+    public int mouseCount;
+    public int level;
+
+    void Start() {
+        if (Instance == null)Instance = this;
+    }
+    void Update() {
+
     }
 }
