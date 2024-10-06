@@ -20,4 +20,9 @@ public class mouse_move : MonoBehaviour
     {
         agent.SetDestination(target.position);
     }
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.name == "cat") { 
+            GameManager.Instance.Win();
+        }
+    }
 }
