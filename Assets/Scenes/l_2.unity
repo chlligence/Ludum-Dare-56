@@ -298,7 +298,7 @@ MonoBehaviour:
   WinPanel: {fileID: 1582416019}
   FailPanel: {fileID: 1582416018}
   image_grid: {fileID: 5575578076686905533, guid: eac212c6af137c942ac1aedb9d0cb1de, type: 3}
-  mouseCount: 1
+  mouseCount: 2
   level: 2
 --- !u!1 &492556172
 GameObject:
