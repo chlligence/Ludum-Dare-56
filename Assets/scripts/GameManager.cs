@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
   
    
     public void UpdateMouseCount() {
-        if (MouseGrid.transform.childCount > 1) RemoveAllChildren(MouseGrid);
+        if (MouseGrid.transform.childCount > 0) RemoveAllChildren(MouseGrid);
         for(int i = 0; i < mouseCount; i++) {
             GameObject go = Instantiate(image_grid, MouseGrid.transform);
         }
@@ -65,6 +65,6 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("l_" + (level+1));
     }
     public void Reset() {
-        SceneManager.LoadScene("l_1");
+        SceneManager.LoadScene("Start");
     }
 }

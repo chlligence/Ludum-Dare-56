@@ -6,12 +6,13 @@ using UnityEngine.AI;
 public class mouse_move : MonoBehaviour
 {
     private GameObject cat;
-    public Transform target;
+    private Transform target;
     NavMeshAgent agent;
 
     void Start()
     {
-        cat = GameObject.Find("cat");
+        cat = GameObject.FindWithTag("cat");
+        //cat = GameObject.Find("cat");
         target = cat.transform;
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
@@ -23,7 +24,7 @@ public class mouse_move : MonoBehaviour
         agent.SetDestination(target.position);
     }
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.name == "cat") { 
+        if (other.gameObject.tag == "cat") { 
             GameManager.Instance.Win();
         }
     }
