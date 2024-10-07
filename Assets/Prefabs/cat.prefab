@@ -31,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 6447327822470524424}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.44, y: -4.52, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -8.7265, y: -4.7549, z: 0}
+  m_LocalScale: {x: 0.641795, y: 0.7063686, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,8 +98,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 6447327822470524424}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.45
-  m_Speed: 2.8
+  m_Radius: 0.35
+  m_Speed: 2.6
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -123,7 +123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3738b31935f2914da9f5677e502e116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 4147263608375177679, guid: 0955ceb399f9144409108a50e6355350, type: 3}
+  isrounded: 0
+  range: 4.1
 --- !u!95 &4054540731825620200
 Animator:
   serializedVersion: 5
@@ -177,9 +179,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.06505656}
+  m_Offset: {x: -0.03, y: -0.02}
   serializedVersion: 2
-  m_Radius: 0.6989161
+  m_Radius: 0.77
 --- !u!50 &7081640836563274100
 Rigidbody2D:
   serializedVersion: 4

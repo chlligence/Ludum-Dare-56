@@ -6,19 +6,29 @@ using static UnityEngine.GraphicsBuffer;
 
 public class cat_auto_move : MonoBehaviour
 {
+    
     public Transform target;
     NavMeshAgent agent;
+    public bool isrounded = false;
+    
+    public float range;
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         agent.SetDestination(target.position);
+        
     }
+    
+  
+
+    
 }

@@ -1,3 +1,4 @@
+using NavMeshPlus.Components;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,5 +28,7 @@ public class mouse_move : MonoBehaviour
         if (other.gameObject.tag == "cat") { 
             GameManager.Instance.Win();
         }
+       
     }
+   
 }

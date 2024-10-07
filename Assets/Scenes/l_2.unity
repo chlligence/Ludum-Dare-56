@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cat
       objectReference: {fileID: 0}
+    - target: {fileID: 6447327822470524424, guid: ad2b8467973934c498491d7eee8d897d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8589850821081536113, guid: ad2b8467973934c498491d7eee8d897d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.36
@@ -297,6 +301,7 @@ MonoBehaviour:
   MouseGrid: {fileID: 1582416017}
   WinPanel: {fileID: 1582416019}
   FailPanel: {fileID: 1582416018}
+  gotodestroy: {fileID: 0}
   image_grid: {fileID: 5575578076686905533, guid: eac212c6af137c942ac1aedb9d0cb1de, type: 3}
   mouseCount: 2
   level: 2

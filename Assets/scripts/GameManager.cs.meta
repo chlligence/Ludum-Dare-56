@@ -3,7 +3,13 @@ guid: 999e1c3ee13442d408e2a963265f7f50
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - cat: {instanceID: 0}
+  - MouseGrid: {instanceID: 0}
+  - WinPanel: {instanceID: 0}
+  - FailPanel: {instanceID: 0}
+  - gotodestroy: {fileID: 6447327822470524424, guid: ad2b8467973934c498491d7eee8d897d, type: 3}
+  - image_grid: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

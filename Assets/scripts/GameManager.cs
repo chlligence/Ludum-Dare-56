@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject MouseGrid;
     public GameObject WinPanel;
     public GameObject FailPanel;
+    public GameObject gotodestroy;
 
     [Header("GameData")]
     public GameObject image_grid;
@@ -38,19 +39,21 @@ public class GameManager : MonoBehaviour
     }
     public void fail() {
         isWin = false;
-        GameOver();
+        GameOverScene();
     }
 
     public void Win() {
         isWin = true;
-        GameOver();
+        GameOverScene();
+        cat.SetActive(false);
     }
-    private void GameOver() {
+    private void GameOverScene() {
         if (isWin) {
             WinPanel.SetActive(true);
         }
         else {
             FailPanel.SetActive(true);
+            cat.SetActive(false);
         }
     }
     public static void RemoveAllChildren(GameObject parent) {
@@ -65,6 +68,6 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("l_" + (level+1));
     }
     public void Reset() {
-        SceneManager.LoadScene("Start");
+        SceneManager.LoadScene("l_" + level);
     }
 }
