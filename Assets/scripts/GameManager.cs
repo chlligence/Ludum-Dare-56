@@ -61,8 +61,8 @@ public class GameManager : MonoBehaviour
         }
     }
     public void nextLevel() {
-        //Debug.Log("levelRead");
-        SceneManager.LoadScene("l_"+(level+1));
+        Debug.Log("levelRead");
+        SceneManager.LoadScene("l_" + (level+1));
     }
     public void Reset() {
         SceneManager.LoadScene("l_1");

@@ -15,7 +15,7 @@ public class MouseManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if (hit.collider == birth_collider) {
-
+                Debug.Log("Create");
                 CreateMouse();
                 GameManager.Instance.mouseCount--;
                 GameManager.Instance.UpdateMouseCount();
@@ -24,6 +24,8 @@ public class MouseManager : MonoBehaviour
     }
 
     void CreateMouse() {
-        if(GameManager.Instance.mouseCount > 0) Instantiate(Mouse,transform);
+        Vector3 pos = transform.position;
+        pos.y += 0.5f;
+        if(GameManager.Instance.mouseCount > 0) Instantiate(Mouse,transform.position,Quaternion.identity,transform);
     }
 }
